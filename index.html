@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Osorio George | Développeur JavaScript (React/Node.js) en Alternance</title>
+    <meta name="description" content="Portfolio de Osorio George, Développeur Web Junior spécialisé en JavaScript (React, Node.js). Disponible pour un contrat d'alternance à Bordeaux ou remote.">
+    <meta name="keywords" content="développeur web, alternance, JavaScript, React, Node.js, Bordeaux, full-stack">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2c3e50">
+    
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Osorio George - Développeur JavaScript Full-Stack en Alternance">
+    <meta property="og:description" content="Développeur Web Junior spécialisé en JavaScript (React/Node.js). À la recherche d'une alternance à partir de 2025.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://osoriogeorge.github.io">
+    <meta property="og:image" content="https://osoriogeorge.github.io/preview.jpg">
+    <meta property="og:image:alt" content="Osorio George - Développeur Web">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/fivicon.png" type="icon george osorio">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+          <nav class="navbar">
+            <a href="index.html" class="logo">Osorio<span>George</span></a>
+            <ul class="nav-links">
+              <li><a href="#about"><i class="fas fa-user"></i> À Propos</a></li>
+              <li><a href="#skills"><i class="fas fa-code"></i> Compétences</a></li>
+              <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projets</a></li>
+              <li><a href="#education"><i class="fas fa-graduation-cap"></i> Formation</a></li>
+              <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      
+      <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            
+           <h1 class="hero-title">Développeur JavaScript</h1>
+            <p class="subtitle">Disponible pour discuter de votre projet ou d'une opportunité d'alternance</p>
+            
+            <a href="#contact" class="hero-contact ">N'hesitez pas a me contacter</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>À Propos</h2>
+            <p>
+                Salut!, je m'appele George, je suis intéressé par le développement web, je cherche une <strong>alternance</strong> pour approfondir mes compétences en JavaScript (React, Node.js) et contribuer à divers projets 
+                Formé à la 3W Academy et avec une expérience en stage chez Web Horizon, je suis motivé pour apprendre et m'investir dans votre entreprise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+<section id="skills" class="section bg-light">
+    <div class="container">
+      <h2>Compétences Techniques</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Langages</h3>
+          <ul>
+            <li class="skill-item"><i class="fab fa-html5 skill-icon"></i> HTML5</li>
+            <li class="skill-item"><i class="fab fa-css3-alt skill-icon"></i> CSS3</li>
+            <li class="skill-item"><i class="fab fa-js skill-icon"></i> JavaScript (ES6+)</li>
+            <li class="skill-item"><i class="fas fa-database skill-icon"></i> SQL</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-cubes"></i> Frameworks</h3>
+          <ul>
+            <li class="skill-item"><i class="fab fa-react skill-icon"></i> React.js</li>
+            <li class="skill-item"><i class="fab fa-node-js skill-icon"></i> Node.js</li>
+            <li class="skill-item"><i class="fas fa-server skill-icon"></i> Express.js</li>
+            <li class="skill-item"><i class="fab fa-sass skill-icon"></i> Sass</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Outils</h3>
+          <ul>
+            <li class="skill-item"><i class="fab fa-git-alt skill-icon"></i> Git</li>
+            <li class="skill-item"><i class="fab fa-github skill-icon"></i> GitHub</li>
+            <li class="skill-item"><i class="fas fa-code skill-icon"></i> VS Code</li>
+            <li class="skill-item"><i class="fas fa-network-wired skill-icon"></i> API REST</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Projects Section (GitHub API) -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <div id="projects-container" class="projects-grid">
+                
+                <div class="project-skeleton">
+                    <div class="skeleton-loader"></div>
+                </div>
+            </div>
+            <a href="https://github.com/osoriogeorge" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> Voir plus sur GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <h2>Formation</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>3W Academy – Formation Développeur Web (Niveau 5)</h3>
+                    <p class="timeline-date">Septembre 2023 - Avril 2024</p>
+                    <ul>
+                        <li>Développement full-stack avec JavaScript, React.js, Node.js</li>
+                        <li>Création de projets web dynamiques et interactifs</li>
+                        <li>Utilisation des bases de données avec SQL et Express.js</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section 
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Stage Développeur Web - Web Horizon (Bordeaux)</h3>
+                    <p class="timeline-date">Mars 2023</p>
+                    <ul>
+                        <li>Développement et mise en page de sites web en HTML, CSS et JavaScript</li>
+                        <li>Intégration d'éléments dynamiques avec React.js</li>
+                        <li>Collaboration avec l'équipe sur l'amélioration de l'UX/UI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    
+<!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2>Contact</h2>
+            <p class="contact-subtitle">N'hesitez pas a me contacter, Disponible immédiatement</p>
+            <div class="contact-grid">
+                <a href="mailto:osoriovgeorge@gmail.com" class="contact-button">
+                    <i class="fas fa-envelope"></i> osoriovgeorge@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/george-osorio" target="_blank" class="contact-button">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                
+                <a href="./assets/CV OSORIO GEORGE.pdf" download class="contact-button">
+                    <i class="fas fa-download"></i> Télécharger mon CV
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+</main>
+    
+<footer role="contentinfo">
+    <div class="container">
+        <div class="social-links">
+            <a href="https://github.com/osoriogeorge" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/george-osorio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p>© <span id="current-year">2025</span> Osorio George</p>
+    </div>
+</footer>
+
+   
+    <script src="script.js" defer></script>
+</body>
+</html>

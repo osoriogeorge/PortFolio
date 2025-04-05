@@ -1,0 +1,15 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Dependencias (si luego usas npm)
+node_modules/
+package-lock.json
+
+# Archivos de entorno
+.env
+.env.local
