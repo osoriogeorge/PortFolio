@@ -1,4 +1,4 @@
-/* ===== GLOBAL VARIABLES ===== */
+/* ===== ROOT VARIABLES ===== */
 :root {
   /* Color Palette */
   --primary-color: #2c3e50;
@@ -11,7 +11,7 @@
   --dark-bg: #2c3e50;
   --white: #fff;
   --gray: #ecf0f1;
-  
+
   /* Tech Colors */
   --html-color: #e34f26;
   --css-color: #264de4;
@@ -24,9 +24,9 @@
   --sql-color: #00758f;
 
   /* Typography */
-  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-main: 'Segoe UI', 'Roboto', 'Helvetica Neue', -apple-system, system-ui, sans-serif;
   --font-size-base: 1rem;
-  
+
   /* Spacing System */
   --space-xxs: 0.25rem;
   --space-xs: 0.5rem;
@@ -35,7 +35,7 @@
   --space-lg: 2rem;
   --space-xl: 3rem;
   --space-xxl: 5rem;
-  
+
   /* Layout */
   --header-height: 80px;
   --border-radius: 8px;
@@ -70,7 +70,8 @@ a {
   transition: var(--transition);
 }
 
-ul {
+ul,
+li {
   list-style: none;
 }
 
@@ -78,6 +79,12 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 /* ===== LAYOUT UTILITIES ===== */
@@ -214,31 +221,48 @@ img {
   margin-bottom: var(--space-sm);
 }
 
+.hero-title {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  border-right: 0.15em solid var(--accent-color);
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--accent-color); }
+}
+
+.hero-title--typing {
+  border-right: 0.15em solid var(--accent-color);
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+.hero-title--typing-mobile {
+  border-right: 0.15em solid var(--accent-color); /* Podrías tener una variable para el color del cursor */
+  animation:
+    typing-mobile 2.5s steps(30, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing-mobile {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
 .subtitle {
   font-size: 1.5rem;
   margin-bottom: var(--space-md);
-}
-
-.highlight-alternance {
-  display: inline-block;
-  background-color: var(--accent-color);
-  color: var(--white);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  margin: var(--space-md) 0;
-}
-
-.hero-contact {
-  display: inline-block;
-  background-color: var(--secondary-color);
-  color: var(--white);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  margin: var(--space-md) 0;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
 }
 
 .hero-contact {
@@ -252,16 +276,23 @@ img {
   border: 2px solid transparent;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .hero-contact:hover {
+  animation: none;
   background-color: var(--primary-dark);
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 0 4px 12px rgba(52, 152, 219, 0.5);
 }
 
 .hero-contact:active {
-  transform: translateY(-1px);
+  transform: translateY(-6px) scale(1.01);
 }
 
 .hero-contact:focus {
@@ -280,7 +311,6 @@ img {
 .about-content p {
   font-size: 1.1rem;
   margin-bottom: var(--space-md);
-  
 }
 
 /* ===== SKILLS SECTION ===== */
@@ -324,7 +354,6 @@ img {
   text-align: center;
 }
 
-/* Tech-specific icon colors */
 .skill-icon.fa-html5 { color: var(--html-color); }
 .skill-icon.fa-css3-alt { color: var(--css-color); }
 .skill-icon.fa-js { color: var(--js-color); }
@@ -412,7 +441,7 @@ img {
 
 /* ===== CONTACT SECTION ===== */
 .contact h2 {
-  margin-bottom: var(--space-sm); 
+  margin-bottom: var(--space-sm);
 }
 
 .contact-subtitle {
@@ -423,7 +452,7 @@ img {
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-md); 
+  gap: var(--space-md);
 }
 
 .contact-button {
@@ -444,7 +473,6 @@ img {
   background: var(--primary-color);
   color: var(--white);
 }
-
 
 /* ===== FOOTER ===== */
 footer {
@@ -512,6 +540,16 @@ footer {
     transform: translateY(-7px) rotate(-45deg);
   }
 
+  .hero-title {
+    white-space: normal;
+    animation: typing-mobile 2.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing-mobile {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
   .timeline::before {
     left: 30px;
   }
@@ -526,21 +564,17 @@ footer {
     --space-lg: 1.5rem;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .hero-title {
+    font-size: 1.8rem;
   }
 
   .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    padding: 0 var(--space-sm);
   }
 
   .hero-contact {
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
-
-  .about-content {
-    text-align: left;
-    padding: 0 var(--space-sm);
+    padding: var(--space-xs) var(--space-md);
   }
 }
+
